@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Square Calculator</title>
+    <title>Text Case</title>
+    <script src="Q4.js"></script>
 </head>
-
 <body>
 
-<h3>Enter a Number</h3>
+<input type="text" id="text">
 
-<input type="number" id="num" placeholder="Enter number" required>
+<br><br>
 
-<button onclick="findSquare()">Find Square</button>
+<input type="radio" name="case" onclick="convert('upper')"> Uppercase
+<br>
+<input type="radio" name="case" onclick="convert('lower')"> Lowercase
+<br>
+<input type="radio" name="case" onclick="convert('same')"> As It Is
+
+<br><br>
 
 <p id="result"></p>
-
-<script>
-function findSquare()
-{
-    var n = document.getElementById("num").value;
-    var square = n * n;
-
-    document.getElementById("result").innerHTML = "Square is: " + square;
-}
-</script>
 
 </body>
 </html>

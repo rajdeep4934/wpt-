@@ -1,11 +1,17 @@
-function printPattern() {
-    for (let i = 3; i >= 1; i--) {      // rows
-        let row = "";
-        for (let j = 1; j <= i; j++) {  // stars in each row
-            row += "* ";
+function validate() { 
+    var data = document.getElementById("a1").value;
+    //alert(data);
+    var i = data.indexOf('@');
+    if (i > 0) {
+        var j = data.lastIndexOf('.');
+        if (j > i) {
+            console.log("Valid Format");
         }
-        console.log(row);
+        else {
+            console.log("Invalid Format ");
+        }
+    }
+    else {
+        console.log("Invalid Format ");
     }
 }
-
-printPattern();
