@@ -1,39 +1,44 @@
-var arr = [10,20,30,40];
-
-function checkValue()
-{
-    var val = document.getElementById("val").value;
-
-    if(arr.includes(Number(val)))
-        document.getElementById("msg").innerHTML="Found";
-    else
-        document.getElementById("msg").innerHTML="Not Found";
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+function mobile(model,price){
+    this.model=model;
+    this.price=price;
 }
 
-function addEnd()
-{
-    var val = document.getElementById("val").value;
-    arr.push(Number(val));
-
-    document.getElementById("result").innerHTML="Array : "+arr;
+function Car(brand, model) {
+    this.brand = brand;
+    this.model = model;
+}
+function friend(name,roll){
+    this.name = name;
+    this.roll = roll;
 }
 
-function insertIndex()
-{
-    var val = document.getElementById("val").value;
-    var index = document.getElementById("index").value;
-
-    arr.splice(index,0,Number(val));
-
-    document.getElementById("result").innerHTML="Array : "+arr;
+friend.prototype.print = function(){
+    console.log("name",this.name,"roll:",this.roll)
 }
 
-function removeIndex()
-{
-    var index = document.getElementById("index").value;
+// Add print function using prototype
+Person.prototype.shreyash = function () {
+    console.log("Name:", this.name, "Age:", this.age);
+};
 
-    arr.splice(index,1);
-
-    document.getElementById("result").innerHTML="Array : "+arr;
+Car.prototype.display = function () {
+    console.log("Brand:", this.brand, "Model:", this.model);
+};
+mobile.prototype.print =function(){
+    console.log("Model:",this.model,"price:",this.price);
 }
 
+// Create instances
+let p1 = new Person("HruGo", 25);
+let c1 = new Car("Toyota", "Camry");
+let s1 = new mobile("iphone",50000);
+let s2= new friend("hrutik",0);
+
+p1.shreyash();
+c1.display();
+s1.print();
+s2.print();

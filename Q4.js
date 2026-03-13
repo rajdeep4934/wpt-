@@ -1,14 +1,16 @@
-function convert(type)
-{
-    var text = document.getElementById("text").value;
-    var output;
+// 4) create object for student which contains 
+//      StudentId
+//      StudentName
+//      Grade 
 
-    if(type == "upper")
-        output = text.toUpperCase();
-    else if(type == "lower")
-        output = text.toLowerCase();
-    else
-        output = text;
+// convert that data in JSON format 
 
-    document.getElementById("result").innerHTML = output;
+let student = {
+	studentid: 101,
+    studentName:"shreyash",
+    greade:'A';
+    
+	print1() {
+		console.log(" a print ");
+	}
 }
